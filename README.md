@@ -1,8 +1,21 @@
 # CUSUM Anomaly Detection - Monthly Time Series
 
-This project demonstrates how CUSUM control charts can be used to detect unusual shifts in monthly time-series data.
+## Executive Summary
+
+- Uses CUSUM control charts to detect unusual shifts in monthly time-series data.
+- Converts tabular monthly data into a monitoring workflow that can flag units or periods for follow-up review.
+- Applies normalization, baseline calculation, and statistical process control to make monitoring more systematic.
+- Supports data quality review, operational monitoring, and exception-based reporting.
+
+## Business Question
+
+How can monthly operational metrics be monitored consistently so unusual shifts are identified early and review effort is focused on the units or periods that need attention?
+
+## Data and Context
 
 The original analysis uses monthly premium data across organizational units, but the method is transferable to other operational monitoring problems where the goal is to flag unusual changes over time.
+
+Raw data is not included because the original source was private. The repository focuses on the monitoring logic and reproducible analytical workflow.
 
 ## What This Project Demonstrates
 
@@ -12,10 +25,6 @@ The original analysis uses monthly premium data across organizational units, but
 - Applying CUSUM control charts to detect process shifts
 - Extracting violations that exceed control limits
 - Using statistical monitoring to prioritize follow-up review
-
-## Problem
-
-Operational metrics can shift gradually or suddenly across different units. Manual inspection is hard when many time series need review. This project applies a reproducible statistical process control method to identify series with unusual movement.
 
 ## Method
 
@@ -37,6 +46,20 @@ Monthly tabular data
   -> CUSUM control chart
   -> violation list for follow-up
 ```
+
+## Key Findings
+
+- CUSUM monitoring can turn many monthly series into a focused exception list for review.
+- Normalization allows units with different scales to be compared through the same monitoring logic.
+- A control-chart approach is more transparent for stakeholder review than ad-hoc visual inspection of many time series.
+
+## Business Implication
+
+The workflow supports exception-based reporting: instead of reviewing every unit manually, analysts can focus on units or periods that breach statistical control limits and then investigate business or data-quality explanations.
+
+## Relevance
+
+This project shows how statistical monitoring can support KPI review, operational reporting, data quality checks, and risk-oriented analytics.
 
 ## Current Repository Notes
 
